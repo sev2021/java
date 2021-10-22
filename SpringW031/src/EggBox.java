@@ -5,6 +5,7 @@ public class EggBox{
 	private int boxSize;
 	private int numBoxes;
 	private int leftOverEggs;
+	
 	//set
 	public void setEggs(int eggs){
 		this.eggs = eggs;
