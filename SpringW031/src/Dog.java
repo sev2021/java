@@ -24,6 +24,6 @@ public class Dog {
 		
 		Dog myDog = new Dog("Rex");  //use 2nd constructor
 		System.out.println(myDog.name);
-		System.out.println(myDog.breed);
+		System.out.println(myDog.breed); //this works because still inside Dog class
 	}
 }

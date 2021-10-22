@@ -25,6 +25,6 @@ public class EggBoxApp{
 		//output
 		JOptionPane.showMessageDialog(null,"Number of boxes needed " + numBoxes);
 		JOptionPane.showMessageDialog(null,"Number of eggs left over " + leftOverEggs);
-		//JOptionPane.showMessageDialog(null,"Private value ss = " + egg.ss);
+	
 	}
 }
