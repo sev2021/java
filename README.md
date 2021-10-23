@@ -19,4 +19,19 @@ Java links:
   Scanner keyboard = new Scanner(System.in);  
   ...  
   input = keyboard.nextInt();  
-      
+  
+**class template**  
+//declare vars  
+//constructor  
+//set method  
+//compute  
+//get method  
+  
+**app template**  
+//declare vars  
+//declare and create objects  
+//set  
+//compute  
+//get  
+//output  
+  
