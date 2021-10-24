@@ -16,7 +16,8 @@ public class GuessNumber {
 	private String message;
 	//constructor
 	public GuessNumber() {
-		computersNumber = (int)(Math.random() * 20);
+		computersNumber = (int)(Math.random() * 20 + 1);
+		System.out.print(computersNumber);
 		usersNumber = 0;
 		message = "";
 	}

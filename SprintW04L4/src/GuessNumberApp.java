@@ -14,18 +14,26 @@ import javax.swing.JOptionPane;
 public class GuessNumberApp {
 	public static void main(String[] args) {
 		//declare vars
-		int usersNumber, computersNumber;
-		String message;
+		int usersNumber = 0, computersNumber = 0, count = 10;
+		String message = "";
 		//declare and create objects
 		GuessNumber myGame = new GuessNumber();
-		//set
-		usersNumber = Integer.parseInt(JOptionPane.showInputDialog("Enter a number:"));
-		myGame.setUsersNumber(usersNumber);
-		//compute
-		myGame.calcComuterAndUser();
-		//get
-		message = myGame.getMessage();
-		computersNumber = myGame.getComputersNumber();
+		//loop
+		while(count > 0) {
+			//set
+			usersNumber = Integer.parseInt(JOptionPane.showInputDialog("Guess a number from 1 to 20. You have " + count + " tries left."));
+			myGame.setUsersNumber(usersNumber);
+			//compute
+			myGame.calcComuterAndUser();
+			//get
+			message = myGame.getMessage();
+			computersNumber = myGame.getComputersNumber();
+			//loop control
+			if(message == "winner") {
+				break;
+			}
+			count --;
+		}
 		//output
 		JOptionPane.showMessageDialog(null, "Computer: " + computersNumber + ". Your number: " + usersNumber + ". You are a " + message + "!");
 	}
