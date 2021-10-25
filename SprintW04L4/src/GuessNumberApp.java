@@ -21,7 +21,8 @@ public class GuessNumberApp {
 		//loop
 		while(count > 0) {
 			//set
-			usersNumber = Integer.parseInt(JOptionPane.showInputDialog("Guess a number from 1 to 20. You have " + count + " tries left."));
+			usersNumber = Integer.parseInt(JOptionPane.showInputDialog("Guess a number from 1 to 20. You have " 
+					+ count + " tries left."));
 			myGame.setUsersNumber(usersNumber);
 			//compute
 			myGame.calcComuterAndUser();
@@ -35,6 +36,7 @@ public class GuessNumberApp {
 			count --;
 		}
 		//output
-		JOptionPane.showMessageDialog(null, "Computer: " + computersNumber + ". Your number: " + usersNumber + ". You are a " + message + "!");
+		JOptionPane.showMessageDialog(null, "Computer's number: " + computersNumber + ". Your number: " 
+					+ usersNumber + ". You are a " + message + "!");
 	}
 }
