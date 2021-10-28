@@ -1,5 +1,5 @@
 public class CinemaProblem {
-
+    ////INPUT
 	//declare vars
 	private String username, message;
 	private int userage;
@@ -9,8 +9,6 @@ public class CinemaProblem {
 		message = "";
 		userage = 0;
 	}
-	
-	//// INPUT
     //set method
 	public void setUsername(String username) {
 		this.username = username;
@@ -23,7 +21,7 @@ public class CinemaProblem {
 	//compute
 	public void computeMessage() {
 		if(userage >= 18 ) {
-			if(username.equals("Sam")) {
+			if(username.equalsIgnoreCase("Sam")) {
 				message = "Welcome, Sam!";
 			}
 			else {
