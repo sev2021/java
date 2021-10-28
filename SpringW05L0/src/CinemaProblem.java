@@ -5,7 +5,8 @@ public class CinemaProblem {
 	private int userage;
 	//constructor
 	public CinemaProblem() {
-		String username = "", message = "";
+		username = "";
+		message = "";
 		userage = 0;
 	}
 	
