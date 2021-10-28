@@ -1,10 +1,12 @@
 public class CinemaProblem {
 
 	//declare vars
-	private String username = "", message = "";
-	private int userage = 0;
+	private String username, message;
+	private int userage;
 	//constructor
 	public CinemaProblem() {
+		String username = "", message = "";
+		userage = 0;
 	}
 	
 	//// INPUT
