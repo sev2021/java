@@ -1,3 +1,14 @@
+/* develop an application that allows a user to enter their age and blood type. 
+ * The app will then display a message outlining which blood groups the user 
+ * can donate to and receive from. Please note that only 18+ can donate. public 
+ * 
+ * input: users enter their age and blood type
+ * process: compute which blood groups the user can donate to and receive from.
+ * 				based on given blood type table. Note that only 18+ can donate
+ * output: display a message outlining which blood groups the user 
+ * 				can donate to and receive from
+*/
+
 import javax.swing.JOptionPane;
 public class BloodApp {
 		public static void main(String[] args) {
