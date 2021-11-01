@@ -1,3 +1,15 @@
+/* user should be asked for their name, the required number of nights, and their age. 
+ * The application should assume that each room costs 90 euro per night 
+ * and then calculate and output the total cost to confirm the booking. 
+ * Please note: a booking can only be confirmed if the user is at least 18
+ * 
+ * INPUT: users enter their name, the required number of nights, and their age
+ * PRICESS: calculate and output the total cost to confirm the booking
+ * 				assuming that each room costs 90 euro per night and that
+ * 				a booking can only be confirmed if the user is at least 18
+ * OUTPUT:  display total costs
+ */
+
 import javax.swing.JOptionPane;
 public class HotelApp {
 	public static void main(String[] args) {
