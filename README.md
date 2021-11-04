@@ -18,7 +18,16 @@ Java links:
   ...  
   Scanner keyboard = new Scanner(System.in);  
   ...  
-  input = keyboard.nextInt();  
+  input = keyboard.nextInt(); 
+  
+ **dialogs in Java:**
+ 
+  import javax.swing.JOptionPane;  
+  JOptionPane.showInputDialog("message_here");
+  JOptionPane.showMessageDialog(null, "message_here");
+  int a = JOptionPane.showOptionDialog(null, "Messagin in dialog", null, 2, 3, null, arr1, 2);  
+  (manual: int a = JOptionPane.showOptionDialog(null, arr1, null, a, a, null, args, arr1);)  
+  
   
 **class template**  
 //declare vars  
