@@ -20,6 +20,10 @@ public class CinemaSeats {
 	
 	////OUTPUT
 	public  void printSeats() {
+		//11 sets in the row check
+		if(seatsStart  + seatsNumber  > 12 ) {
+			seatsStart  = 12 - seatsNumber ;
+		}
 		System.out.print(" \nOdeon Cinema - available seats:\n\t");
 		for(char i='a'; i<'l'; i++) {	////LOOP on CHARACTERS 
 			System.out.print(i + " ");
