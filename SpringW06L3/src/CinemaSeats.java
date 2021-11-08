@@ -1,6 +1,6 @@
 
 public class CinemaSeats {
-	////class to display cinema seats layou
+	////class to display cinema seats layout
 	private int seatsNumber, seatsRow, seatsStart;
 	
 	////CONSTRUCTOR
@@ -20,7 +20,7 @@ public class CinemaSeats {
 	
 	////OUTPUT
 	public  void printSeats() {
-		//11 sets in the row check
+		//eleven seats in the row check
 		if(seatsStart  + seatsNumber  > 12 ) {
 			seatsStart  = 12 - seatsNumber ;
 		}
