@@ -25,6 +25,7 @@ public class CinemaApp {
 		inputRow = keyInput.nextInt();		
 		System.out.print("Enter first seat letter: ");
 		inputStart = keyInput.next().charAt(0);
+		
 		////BELOW call class to translate char input into number
 		////it can be done simpler but we try to use "for" loop instead
 		numberStart = myStart.getCharToInt(inputStart );

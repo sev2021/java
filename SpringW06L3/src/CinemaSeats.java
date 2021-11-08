@@ -24,10 +24,13 @@ public class CinemaSeats {
 		if(seatsStart  + seatsNumber  > 12 ) {
 			seatsStart  = 12 - seatsNumber ;
 		}
+		
+		//seats plan layout print
 		System.out.print(" \nOdeon Cinema - available seats:\n\t");
 		for(char i='a'; i<'l'; i++) {	////LOOP on CHARACTERS 
 			System.out.print(i + " ");
 		}
+		
 		System.out.print("\n");
 		for(int i =6; i>0; i--) {  //printing cinema seats
 			if(i != seatsRow) System.out.print("\nRow " + i + "\tO O O O O O O O O O O");
