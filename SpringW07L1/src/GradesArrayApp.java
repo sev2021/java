@@ -1,9 +1,9 @@
 import javax.swing.JOptionPane;
 public class GradesArrayApp {
-	public static void(String args[]) {
+	public static void main(String args[]) {
 		////INPUT
 		//variable declaration
-		int subjectsNumbers, singleSubject;
+		int subjectsNumber, singleSubject, allGrades;
 		
 		//declare and create objects
 		subjectsNumber = Integer.parseInt(JOptionPane.showInputDialog("Enter number of subjects:"));
@@ -17,7 +17,8 @@ public class GradesArrayApp {
 		myGrades.computeGrades();
 		
 		//get
-		System.out.println(Your grades: myGrades.getGrades);
+		//allGrades = myGrades.getGrades;
+		System.out.println("Your grades: " + myGrades.getGrades());
 	}
 	
 }

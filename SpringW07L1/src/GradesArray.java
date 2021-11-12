@@ -16,8 +16,8 @@ public class GradesArray {
 	}
 	
 	//set method
-	public setSubject(int singleSubject) {
-		this singleSubject = singleSubject;
+	public void setSubject(int singleSubject) {
+		this.singleSubject = singleSubject;
 	}
 	
 	
