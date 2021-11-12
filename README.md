@@ -6,6 +6,12 @@ Java links:
   
   int tabl[ ] = {1, 2, 3};  
   int tabl[ ] = new int[3];  
+  -or-  
+  int[] tabl;   //array declaration   
+  tabl = new int[4];  //array initiation for size of 4  
+  ...  
+  tabl = new int[8];  //array initiation for size of 8  
+  ...  
 
  **2D table in Java:**  
  
