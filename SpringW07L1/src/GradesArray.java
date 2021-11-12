@@ -27,6 +27,7 @@ public class GradesArray {
 		System.out.print("PROCESS");
 	}
 	
+	
 	////OUTPUT
 	//getter methods
 	public int getGrades() {
