@@ -23,6 +23,14 @@ public class GradesArray {
 	
 	////PROCESS
 	//compute grades
-	public void compute
+	public void computeGrades() {
+		System.out.print("PROCESS");
+	}
+	
+	////OUTPUT
+	//getter methods
+	public int getGrades() {
+		return allSubjects;
+	}
 	
 }
