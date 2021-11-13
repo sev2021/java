@@ -10,7 +10,6 @@ public class L2Grades {
 	private String singleGrade, totalGrades;
 	//constructor
 	public L2Grades() {
-		
 	}
 	
 	//set method
