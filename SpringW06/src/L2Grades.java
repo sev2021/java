@@ -9,7 +9,9 @@ public class L2Grades {
 	private int numSubjects;
 	private String singleGrade, totalGrades;
 	//constructor
-	public L2Grades() {}
+	public L2Grades() {
+		
+	}
 	
 	//set method
 	public void setNumSubjects(int numSubjects) {
