@@ -2,15 +2,28 @@ Java links:
 * https://www.jdoodle.com/online-java-compiler/
   
   
-**1D table in Java:** 
+**1D arrays in Java:** 
   
   int tabl[ ] = {1, 2, 3};  
-  int tabl[ ] = new [3];  
+  int tabl[ ] = new int[3];  
+  -or-  
+  int[] tabl;   //array declaration   
+  tabl = new int[4];  //array initiation for size of 4  
+  ...  
+  tabl = new int[8];  //array initiation for size of 8  
+  ...  
 
- **2D table in Java:**  
+ **2D arrays in Java:**  
  
   int tabl[ ][ ] = {{1, 2}, {4, 6}, {7, 8}, {11, 25}};  
-  int tabl[ ][ ] = new [2][5];  
+  int tabl[ ][ ] = new int[2][5];  
+  
+**Array iteration simple way**
+  
+  int arr[ ] = {11,22,33,44};  
+  for(int a: arr) {System.out.println(a)};  
+  
+  
   
  **CLI input in Java:**
  
@@ -19,6 +32,7 @@ Java links:
   Scanner keyboard = new Scanner(System.in);  
   ...  
   input = keyboard.nextInt(); 
+  
   
  **dialogs in Java:**
  
