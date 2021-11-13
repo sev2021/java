@@ -8,21 +8,14 @@ public class L2Grades {
 	//declare variables
 	private int numSubjects;
 	private String singleGrade, totalGrades;
-	
 	//constructor
-	public L2Grades() {
-		numSubjects = 0;
-		singleGrade = "";
-		totalGrades = "";
-	}
+	public L2Grades() {}
 	
 	//set method
 	public void setNumSubjects(int numSubjects) {
 		this.numSubjects = numSubjects;
 		totalGrades = "These are results of your " + numSubjects + " subjects:\n\t";
-		
 	}
-	
 	
 	////PROCESS
 	//compute grades
