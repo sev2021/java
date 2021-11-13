@@ -6,32 +6,27 @@
 public class GradesArray {
 	////INPUT
 	//declare variables
-	private int subjectsNumber, singleSubject, allSubjects;
-	
+	private int subjectsNumber, allSubjects;
 	//constructor
+	//from GradesArrayApp INPUT with  number of subject <--
 	public GradesArray(int subjectsNumber) {
 		this.subjectsNumber = subjectsNumber;
-		this.singleSubject = 0;
-		this.allSubjects  =0;
+	//back to GradesArrayApp INPUT -->
 	}
-	
-	//set method
-	public void setSubject(int singleSubject) {
-		this.singleSubject = singleSubject;
-	}
-	
 	
 	////PROCESS
 	//compute grades
-	public void computeGrades() {
-		System.out.print("PROCESS");
+	//from GradesArrayApp with individual subject grade <--
+	public void addGrades(int key, int oneGrade) {
+		allSubjects += oneGrade;
+		System.out.println("Subject " + (key + 1) + " = " + allSubjects);
 	}
-	
+	//back to GradesArrayApp  fetch new value or  (-1)-->
 	
 	////OUTPUT
 	//getter methods
-	public int getGrades() {
-		return allSubjects;
+	public double getGrades() {
+		return (double)allSubjects / (double)subjectsNumber;
 	}
 	
 }
