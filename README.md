@@ -23,8 +23,13 @@ Java links:
   int arr[ ] = {11,22,33,44};  
   for(int a: arr) {System.out.println(a)};  
   
+**Array to String translation**  
   
+  import java.util.Arrays;  
+  int[] arr = {22,33,44};  
+  String srr = Arrays.toString(arr);  
   
+ **-------------------------------------------**  
  **CLI input in Java:**
  
   import java.util.Scanner;  
@@ -42,7 +47,7 @@ Java links:
   int a = JOptionPane.showOptionDialog(null, "Messagin in dialog", null, 2, 3, null, arr1, 2);  
   (manual: int a = JOptionPane.showOptionDialog(null, arr1, null, a, a, null, args, arr1);)  
   
-  
+**-------------------------------------------**  
 **class template**  
 //declare vars  
 //constructor  
