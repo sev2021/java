@@ -1,10 +1,12 @@
 import java.util.Random;
+import javax.swing.JOptionPane;
 public class GuessingGame {
 	////INPUT
 	//declare variables
-	private int guessRange, guessTries, guessNumber;
+	private int guessRange, guessTries, computerNumber, userNumber;
+	private String stringResult = "You loose!";
 	private int[] triesArray;
-	Random randGenerator = new Random();
+	private Random randGenerator = new Random();
 	//constructor
 	public GuessingGame() {}
 	
@@ -18,13 +20,31 @@ public class GuessingGame {
 	
 	////PROCESS ?
 	//compute
-	public void computeNumber() {
-		guessNumber = randGenerator.nextInt(guessRange);
-		while(guessTries>0) {
-			System.out.println(guessNumber);
-			guessTries --;
+	public void computeGuess() {
+		computerNumber = randGenerator.nextInt(guessRange) + 1;
+		System.out.println(computerNumber); //temporary check
+		triesArray = new int[guessTries];
+		
+		for(int i=0; i<guessTries; i++) {
+			userNumber = Integer.parseInt(JOptionPane.showInputDialog(
+				 "Guess a number from 1 to " + guessRange));
+			triesArray[i] = userNumber; 
+			if(userNumber == computerNumber) {
+				stringResult = "You win!";
+				i = guessTries;
+			}
+			stringResult += "\nWinning number: " + computerNumber + ".";
 		}
 	}
 	
+	////OUTPUT
+	//getter method
+	public String getResult() {
+		return stringResult;
+	}
+	
+	public int[] getTriesArray() {
+		return triesArray;
+	}
 
 }
