@@ -14,5 +14,6 @@ public class OneToTenApp {
 		////PROCESS
 		//compute
 		myOneToTen.computeCheckArray();
+		
 	}
 }

@@ -22,6 +22,5 @@ public class OneToTen {
 		}
 		if(userTry  == oneToTenArray[0]) System.out.println("GOOD " + Arrays.toString(oneToTenArray));
 		System.out.println("BAD " + Arrays.toString(oneToTenArray));
-		
 	}
 }
