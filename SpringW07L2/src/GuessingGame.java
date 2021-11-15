@@ -33,8 +33,8 @@ public class GuessingGame {
 				stringResult = "You win!";
 				i = guessTries;
 			}
-			stringResult += "\nWinning number: " + computerNumber + ".";
 		}
+		stringResult += "\nWinning number: " + computerNumber + ".";
 	}
 	
 	////OUTPUT
