@@ -1,3 +1,7 @@
+/* Create an application that generates an array of 5 random numbers 1-10. 
+ * The user should then guess a number and the app will tell them 
+ * how many time that number exists within the array.
+ */
 import java.util.Random;
 import java.util.Arrays;
 public class OneToTen {
@@ -5,13 +9,13 @@ public class OneToTen {
 	//declare variable
 	private int[] oneToTenArray = new int[5];
 	Random randGenerator = new Random();
-	private int userTry;
+	private int userNumber, userMatch = 0;
 	//constructor
 	public OneToTen() {}
 	
 	//setter method
-	public void setUserTry(int userTry) {
-		this.userTry = userTry;
+	public void setUserNumber(int userNumber) {
+		this.userNumber = userNumber;
 	}
 			
 	////PROCESS
@@ -19,8 +23,14 @@ public class OneToTen {
 	public void computeCheckArray() {
 		for(int i=0; i<5; i++) {
 			oneToTenArray[i] = randGenerator.nextInt(10) + 1;
+			if(oneToTenArray[i] == userNumber) userMatch++;
 		}
-		if(userTry  == oneToTenArray[0]) System.out.println("GOOD " + Arrays.toString(oneToTenArray));
-		System.out.println("BAD " + Arrays.toString(oneToTenArray));
+	}
+	
+	////OUTPUT
+	//getter method
+	public  String getResult() {
+		System.out.print(Arrays.toString(oneToTenArray));
+		return "Number " + userNumber + " exist " + userMatch + " times in my array.";
 	}
 }
