@@ -18,12 +18,19 @@ public class OneToTen {
 		this.userNumber = userNumber;
 	}
 			
+	
 	////PROCESS
 	//compute
 	public void computeCheckArray() {
 		for(int i=0; i<5; i++) {
 			oneToTenArray[i] = randGenerator.nextInt(10) + 1;
-			if(oneToTenArray[i] == userNumber) userMatch++;
+			// now is the easiest moment to check to check for number
+			// but I presume we were asked to create array first
+			// and then check it again - so I amend my code
+			// if(oneToTenArray[i] == userNumber) userMatch++;
+		}
+		for(int i: oneToTenArray) {
+			if(i == userNumber) userMatch++;
 		}
 	}
 	
