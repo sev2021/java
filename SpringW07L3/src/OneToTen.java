@@ -18,7 +18,6 @@ public class OneToTen {
 		this.userNumber = userNumber;
 	}
 			
-	
 	////PROCESS
 	//compute
 	public void computeCheckArray() {
