@@ -25,7 +25,7 @@ public class SortArrayApp {
 		findMax.computeMax();
 		
 		
-		////OUTPUT
+		////OUTPUT 
 		//get
 		JOptionPane.showMessageDialog(null, findMax.getResult());
 	}

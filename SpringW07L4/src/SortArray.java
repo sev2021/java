@@ -30,12 +30,14 @@ public class SortArray {
 		arrayToSort = new int[arraySize]; //array initiation
 		for(int i=0; i<arraySize; i++) {
 			arrayToSort[i] = randGenerator.nextInt(arrayRange) + 1;
-			if(arrayToSort[i] > arrayMax) arrayMax = arrayToSort[i];
-		}	
+		}
+		for(int i: arrayToSort) {
+			if(i > arrayMax) arrayMax = i;
+		}
 	}
 	
 	
-	////OUTPUT
+	////OUTPUT 
 	//get method
 	public String getResult() {
 		return arrayMax + " is the largest number int this array:\n" + Arrays.toString(arrayToSort);

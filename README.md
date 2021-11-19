@@ -16,6 +16,7 @@ Java links:
  **2D arrays in Java:**  
  
   int tabl[ ][ ] = {{1, 2}, {4, 6}, {7, 8}, {11, 25}};  
+  int tabl[ ][ ] = {{1, 2, 3}, {4, 6}, {7, 8, 9, 10}, {11, 25}}; - variouas inner arrays allowed  
   int tabl[ ][ ] = new int[2][5];  
   
 **Array iteration simple way**

@@ -15,6 +15,7 @@ public class OneToTenApp {
 		userNumber = Integer.parseInt(JOptionPane.showInputDialog("Enter number between 1 and 10: "));
 		myOneToTen.setUserNumber(userNumber);
 		
+		
 		////PROCESS
 		//compute
 		myOneToTen.computeCheckArray();

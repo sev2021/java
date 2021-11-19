@@ -23,7 +23,9 @@ public class OneToTen {
 	public void computeCheckArray() {
 		for(int i=0; i<5; i++) {
 			oneToTenArray[i] = randGenerator.nextInt(10) + 1;
-			if(oneToTenArray[i] == userNumber) userMatch++;
+		}
+		for(int i: oneToTenArray) {
+			if(i == userNumber) userMatch++;
 		}
 	}
 	
