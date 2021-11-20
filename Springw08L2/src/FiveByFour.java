@@ -4,6 +4,7 @@ public class FiveByFour {
 		Scanner keyboard = new Scanner(System.in);
 		String nextResult = "n", userNumber = "";
 		
+		
 		do {
 		System.out.print("Enter string: ");
 		userNumber = keyboard.next();
