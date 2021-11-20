@@ -11,6 +11,5 @@ public class FiveByFour {
 		nextResult = keyboard.next();		
 		} while (nextResult.equals("Y"));
 		
-		for(int i =0; i < userNumber.length(); i++) System.out.println(userNumber.charAt(i) + "::" + (int)userNumber.charAt(i));
 	}
 }
