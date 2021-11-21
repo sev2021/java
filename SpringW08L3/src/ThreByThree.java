@@ -1,4 +1,8 @@
-
+/* Create a 3x3 array and put set values into the array.
+* 1.       Sum each row
+* 2.       Sum each column
+* 3.       Sum the entire array
+*/
 public class ThreByThree {
 	public static void main(String[] args) {
 		//declare variables
