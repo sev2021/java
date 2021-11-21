@@ -4,19 +4,22 @@ public class BattleshipApp{
 		//declare variable
 		Battleship newBattle = new Battleship();
 		int rowShoot, colShoot;
+		String message;
 		Scanner keyb = new Scanner(System.in);
 		
 		//set array
 		newBattle.setSeaArray();
 		
 		//play game
-		for(int i =0; i<3; i++) {
-			newBattle.printSeaArray();
+		do {
+			newBattle.printSeaArray();  // call to print the sea before shoot
 			System.out.print("Enter row to shoot (1 to 3)? ");
 			rowShoot = keyb.nextInt();
 			System.out.print("Enter column to shoot (1 to 3)? ");
 			colShoot = keyb.nextInt();
-			System.out.println("Shoot on row " + rowShoot + " and column " + colShoot );
-		}
+			System.out.println(">> Shoot on row " + rowShoot + " and column " + colShoot + "! <<");
+			message  = newBattle.shootSeaArray(rowShoot, colShoot); // call to shoot the sea
+			System.out.println("\n>>>> " + message + " <<<<\n");
+		} while(!message.equals("You HIT! You WIN!"));
 	}
 }
