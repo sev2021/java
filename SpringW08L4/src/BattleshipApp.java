@@ -19,6 +19,7 @@ public class BattleshipApp{
 			colShoot = keyb.nextInt();
 			System.out.println(">> Shoot on row " + rowShoot + " and column " + colShoot + "! <<");
 			message  = newBattle.shootSeaArray(rowShoot, colShoot); // call to shoot the sea
-		} while(!message.equals("You HIT! You WIN!"));
+		} while(!message.equals("YOU HIT! YOU WIN!"));
+		newBattle.printSeaArray(); 
 	}
 }
