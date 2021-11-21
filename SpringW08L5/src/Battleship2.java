@@ -2,7 +2,7 @@ public class Battleship2 {
 	////INPUT
 	//declare variable
 	private int[] seaArray = new int[9];
-	private String[] spriteArray = {"~", "x", "~"}; 
+	private String[] spriteArray = {"~", "x", "~", "#"}; 
 	private String message = "Battleship";
 
 	//constructor
@@ -35,10 +35,11 @@ public class Battleship2 {
 			seaArray[(row - 1) * 3 + col -1] = 1;
 			message = "YOU MISSED!";
 		}
-		else if(seaArray[(row - 1) * 3 + col -1] == 1) {
-			message = "YOU MISSED AGAIN!";
+		else if(seaArray[(row - 1) * 3 + col -1] == 2) {
+			seaArray[(row - 1) * 3 + col -1] = 3;
+			message = "YOU HIT! YOU WIN!";
 		}
-		else message = "YOU HIT! YOU WIN!";
+		else message = "YOU MISSED AGAIN!";
 		return message;
 	}
 	
