@@ -8,7 +8,6 @@ public class FiveByFour {
 	////INPUT
 	//declare variables and objects
 	private int[] averageYears; 
-	private int averageTotal;
 	private int[][] resultsArray;
 	Scanner keyb = new Scanner(System.in);
 	
@@ -33,16 +32,13 @@ public class FiveByFour {
 	////PROCESS
 	//compute method
 	public void computeAverage() {
-		averageTotal = 0;
 		averageYears = new int[resultsArray.length];  //array of average result for each year
 		for(int courseYear=0; courseYear<resultsArray.length; courseYear++) {
 			for(int courseResult=0; courseResult<resultsArray[courseYear].length; courseResult++) {
 				averageYears[courseYear] += resultsArray[courseYear][courseResult];
 			}
 			averageYears[courseYear] /= resultsArray[courseYear].length;
-			averageTotal  += averageYears[courseYear];
 		}
-		averageTotal /=  averageYears.length;
 	}
 	
 	
@@ -50,9 +46,5 @@ public class FiveByFour {
 	//get method
 	public int[] getAverageYears(){
 		return averageYears;
-	}
-	
-	public int getAverageTotal() {
-		return averageTotal;
 	}
 }		
