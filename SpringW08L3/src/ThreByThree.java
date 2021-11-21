@@ -15,7 +15,7 @@ public class ThreByThree {
 			System.out.print("\n\n");
 		}
 		
-		//compute average
+		//compute averages
 		for(int i=0; i<3; i++) {
 			System.out.println("Sum of row " + (i + 1) + " equals: " + (intArray[i][0] + intArray[i][1] + intArray[i][2]));
 		}
