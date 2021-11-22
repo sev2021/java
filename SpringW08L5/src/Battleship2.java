@@ -1,16 +1,24 @@
 public class Battleship2 {
 	////INPUT
 	//declare variable
-	private int[] seaArray = new int[9];
-	private String[] spriteArray = {"~", "x", "~", "#"}; 
+	private int[] seaArray = new int[9];  // computer battleship here
+	private int[] userArray = new int[9];  // user battleship here (hidden)
+	private int[] userCheck = new int[9];  // cells checked by computer 
+	private int computerShoot;
+	private String[] spriteArray = {"~", "x", "2", "#","U", "#"}; 
 	private String message = "Battleship";
+	private String compMessage = "Battleship";
 
 	//constructor
 	public Battleship2() { } 
 	
-	//set array
+	//set user array
+	public void setUserArray(int row, int col)  {
+		userArray[(row - 1) * 3 + col -1] = 4;
+	}
+	
+	//set computer array
 	public int[] setSeaArray() {
-		//seaArray = new int[9];
 		seaArray[(int)(Math.random() * 9)] = 2;
 		return seaArray;
 	}
@@ -19,17 +27,44 @@ public class Battleship2 {
 	//
 	
 	////OUTPUT
-	//get array before shoot
+	//get user array before shoot
+	public void printUserArray() {
+		System.out.println("\n~~~~~~~~~~~~~~~~~~~~~~~~\n~~~~ "
+				+ compMessage + " ~~~~\n~~~ user board ~~~");
+
+		for(int i = 0; i<userArray.length; i++) {
+			System.out.print(" " + spriteArray[userArray[i]]);
+			if((i+1)%3 == 0) System.out.print("\n");
+		}
+	}
+	
+	//get computer array before shoot
 	public void printSeaArray() {
 		System.out.println("\n~~~~~~~~~~~~~~~~~~~~~~~~\n~~~~ "
-				+ message + " ~~~~");
+				+ message + " ~~~~\n~~~ computer board ~~~");
+
 		for(int i = 0; i<seaArray.length; i++) {
 			System.out.print(" " + spriteArray[seaArray[i]]);
 			if((i+1)%3 == 0) System.out.print("\n");
 		}
 	}
 	
-	//get array after shoot
+	
+	//get shoot to user array
+	public String shootUserArray() {
+		do computerShoot = (int)(Math.random() * 9);
+		while(userCheck[computerShoot] == 1);
+		userCheck[computerShoot] = 1;
+		userArray[computerShoot] += 1;
+		compMessage = "COMPUTER MISSED!";
+		if(userArray[computerShoot] == 5) {
+			compMessage = "COMPUTER HIT YOU!";
+		}
+		return compMessage;
+	}
+
+	
+	//get shoot to computer array
 	public String shootSeaArray(int row, int col) {
 		if(seaArray[(row - 1) * 3 + col -1] == 0) {
 			seaArray[(row - 1) * 3 + col -1] = 1;
