@@ -31,11 +31,11 @@ public class Battleship2App{
 			message  = newBattle.shootSeaArray(rowShoot, colShoot); // call to shoot the sea
 		} while(!message.equals("YOU HIT! YOU WIN!") && !compMessage.equals("COMPUTER HIT YOU!"));
 		if(message.equals("YOU HIT! YOU WIN!")) {
-			System.out.println("\nCongratulations! You WIN!");
+			System.out.println("\n>>> Congratulations! You WIN! <<<");
 			newBattle.printSeaArray(); 
 		}
 		else{
-			System.out.println("\nComputer win! You lost!");
+			System.out.println("\n>> Computer win! You lost! <<");
 			newBattle.printUserArray(); 
 		}
 		

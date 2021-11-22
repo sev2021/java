@@ -5,7 +5,7 @@ public class Battleship2 {
 	private int[] userArray = new int[9];  // user battleship here (hidden)
 	private int[] userCheck = new int[9];  // cells checked by computer 
 	private int computerShoot;
-	private String[] spriteArray = {"~", "x", "2", "#","U", "#"}; 
+	private String[] spriteArray = {"~", "x", "~", "#","U", "#"}; 
 	private String message = "Battleship";
 	private String compMessage = "Battleship";
 
@@ -18,9 +18,8 @@ public class Battleship2 {
 	}
 	
 	//set computer array
-	public int[] setSeaArray() {
+	public void setSeaArray() {
 		seaArray[(int)(Math.random() * 9)] = 2;
-		return seaArray;
 	}
 		
 	////PROCESS
