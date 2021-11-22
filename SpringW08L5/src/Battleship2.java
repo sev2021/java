@@ -28,7 +28,7 @@ public class Battleship2 {
 	////OUTPUT
 	//get user array before shoot
 	public void printUserArray() {
-		System.out.println("\n~~~~~~~~~~~~~~~~~~~~~~~~\n~~~~ "
+		System.out.println("\n~~~~ "
 				+ compMessage + " ~~~~\n~~~ user board ~~~");
 
 		for(int i = 0; i<userArray.length; i++) {
@@ -39,7 +39,7 @@ public class Battleship2 {
 	
 	//get computer array before shoot
 	public void printSeaArray() {
-		System.out.println("\n~~~~~~~~~~~~~~~~~~~~~~~~\n~~~~ "
+		System.out.println("\n~~~~ "
 				+ message + " ~~~~\n~~~ computer board ~~~");
 
 		for(int i = 0; i<seaArray.length; i++) {

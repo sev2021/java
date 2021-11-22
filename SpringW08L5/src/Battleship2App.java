@@ -3,7 +3,7 @@ public class Battleship2App{
 	public static void main(String[] args) {
 		//declare variable
 		Battleship2 newBattle = new Battleship2();
-		int rowShoot, colShoot, rowUser, colUser;
+		int rowShoot, colShoot, rowUser, colUser, round = 1;
 		String message, compMessage;
 		Scanner keyb = new Scanner(System.in);
 		
@@ -20,8 +20,11 @@ public class Battleship2App{
 		
 		//play game
 		do {
+			System.out.print("\n~~~~~~~~~~~~~~~~~~~~~~~~ Round:" + round );
+			round ++;
 			compMessage = newBattle.shootUserArray(); //computer move
 			newBattle.printUserArray();
+			
 			newBattle.printSeaArray();  // call to print the sea before shoot
 			System.out.print("Enter row to shoot (1 to 3)? ");
 			rowShoot = keyb.nextInt();
@@ -30,6 +33,7 @@ public class Battleship2App{
 			//System.out.println(">> You shoot on row " + rowShoot + " and column " + colShoot + "! <<");
 			message  = newBattle.shootSeaArray(rowShoot, colShoot); // call to shoot the sea
 		} while(!message.equals("YOU HIT! YOU WIN!") && !compMessage.equals("COMPUTER HIT YOU!"));
+		
 		if(message.equals("YOU HIT! YOU WIN!")) {
 			System.out.println("\n>>> Congratulations! You WIN! <<<");
 			newBattle.printSeaArray(); 
