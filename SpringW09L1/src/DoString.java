@@ -9,7 +9,8 @@
 public class DoString {
 	////INPUT
 	//declare variable
-	private String userInput;
+	private String userInput, newString;
+	private StringBuffer userBuffer;
 	private int lettersCount;
 	
 	//constructor
@@ -19,9 +20,8 @@ public class DoString {
 
 	//compute
 	public void computeCount() {
-		for(int i=0; i<userInput.length(); i++) {
-			if(userInput.charAt(i) != ' ' && userInput.charAt(i) != '.') lettersCount ++;
-		}
+		newString = userInput.replaceAll("[ ,.]", "");
+		lettersCount  = newString.length();
 	}
 	
 	//get

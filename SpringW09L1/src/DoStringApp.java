@@ -23,8 +23,6 @@ public class DoStringApp {
 		
 		////OUTPUT
 		//get method
-		
-		JOptionPane.showMessageDialog(null, doMyString.getComputeCount());
-		
+		JOptionPane.showMessageDialog(null, "Counts the letters: " + doMyString.getComputeCount());
 	}
 }
