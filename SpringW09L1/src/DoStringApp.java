@@ -7,6 +7,7 @@
 *  -  Alters the String so that all vowels are replaced by exclamation points
 */
 import javax.swing.JOptionPane;
+import java.util.Arrays;
 public class DoStringApp {
 	public static void main(String[] args) {
 		////INPUT
@@ -23,6 +24,14 @@ public class DoStringApp {
 		
 		////OUTPUT
 		//get method
-		JOptionPane.showMessageDialog(null, "Counts the letters: " + doMyString.getComputeCount());
+		JOptionPane.showMessageDialog(null, "You entered string: : " + userInput
+												+ "\nCounts the letters: " + doMyString.getLettersCount()
+												+ "\nCounts vowels: " + doMyString.getVowelsCount()
+												+ "\nEvery second letter: " + doMyString.getEvenLetters()
+												+ "\nPositions of each space: " 
+												+ Arrays.toString(doMyString.getSpacePositions())
+												+ "\nVowels replaced by exclamation points: "
+												+ userInput.replaceAll("[aeiouAEIOU]", "!")
+				);	
 	}
 }

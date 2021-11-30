@@ -9,9 +9,9 @@
 public class DoString {
 	////INPUT
 	//declare variable
-	private String userInput, newString;
-	private StringBuffer userBuffer;
-	private int lettersCount;
+	private String userInput, newString, evenLetters="";
+	private int lettersCount, vowelsCount;
+	private int[] spacePositions;
 	
 	//constructor
 	public DoString(String userInput) {
@@ -20,13 +20,45 @@ public class DoString {
 
 	//compute
 	public void computeCount() {
+		//Counts the letters
 		newString = userInput.replaceAll("[ ,.]", "");
 		lettersCount  = newString.length();
+		
+		//new String that only contains every second letter
+		for(int i=1; i<newString.length(); i += 2) {
+			evenLetters += newString.charAt(i);
+		}
+		
+		//Counts vowels
+		newString = userInput.replaceAll("[^aeiouAEIOU]", "");
+		vowelsCount  = newString.length();
+		
+		////Positions of each space
+		//compute number of spaces inside userInput
+		newString = userInput.replaceAll("[^ ]", "");
+		//create array to store positions
+		spacePositions = new int[newString.length()];
+		//find all spaces position inside userInput
+		int j = 0; //index for positions array
+		for(int i=0; i<userInput.length(); i++) {
+			if(userInput.charAt(i) == ' ') {
+				spacePositions[j] = i;
+				j++;
+			}
+		}
 	}
 	
 	//get
-	public int getComputeCount() {
+	public int getLettersCount() {
 		return lettersCount;
 	}
-	
+	public int getVowelsCount() {
+		return vowelsCount;
+	}
+	public String getEvenLetters() {
+		return evenLetters;
+	}
+	public int[] getSpacePositions() {
+		return spacePositions;
+	}
 }
