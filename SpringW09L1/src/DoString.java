@@ -9,7 +9,7 @@
 public class DoString {
 	////INPUT
 	//declare variable
-	private String userInput, newString, evenLetters="";
+	private String userInput, newString, evenLetters;
 	private int lettersCount, vowelsCount;
 	private int[] spacePositions;
 	
@@ -22,6 +22,7 @@ public class DoString {
 	public void computeLettersCount() {
 		newString = userInput.replaceAll("[ ,.]", "");
 		lettersCount  = newString.length();
+		
 	}
 	
 	public void computeVowelsCount() {

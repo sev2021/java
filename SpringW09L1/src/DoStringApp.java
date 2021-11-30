@@ -36,4 +36,6 @@ public class DoStringApp {
 												+ "\nVowels replaced by exclamation points: "
 												+ userInput.replaceAll("[aeiouAEIOU]", "!"));	
 	}
+	
 }
+
