@@ -20,7 +20,10 @@ public class DoStringApp {
 		
 		////PROCESS
 		//compute string
-		doMyString.computeCount();
+		doMyString.computeLettersCount();
+		doMyString.computeVowelsCount();
+		doMyString.computeEvenLetters();
+		doMyString.computeSpacePositions();
 		
 		////OUTPUT
 		//get method
@@ -31,7 +34,6 @@ public class DoStringApp {
 												+ "\nPositions of each space: " 
 												+ Arrays.toString(doMyString.getSpacePositions())
 												+ "\nVowels replaced by exclamation points: "
-												+ userInput.replaceAll("[aeiouAEIOU]", "!")
-				);	
+												+ userInput.replaceAll("[aeiouAEIOU]", "!"));	
 	}
 }

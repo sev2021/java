@@ -19,20 +19,24 @@ public class DoString {
 	}
 
 	//compute
-	public void computeCount() {
-		//Counts the letters
+	public void computeLettersCount() {
 		newString = userInput.replaceAll("[ ,.]", "");
 		lettersCount  = newString.length();
-		
-		//new String that only contains every second letter
+	}
+	
+	public void computeVowelsCount() {
+		newString = userInput.replaceAll("[^aeiouAEIOU]", "");
+		vowelsCount  = newString.length();
+	}
+	
+	public void computeEvenLetters() {
+		newString = userInput.replaceAll("[ ,.]", "");
 		for(int i=1; i<newString.length(); i += 2) {
 			evenLetters += newString.charAt(i);
 		}
-		
-		//Counts vowels
-		newString = userInput.replaceAll("[^aeiouAEIOU]", "");
-		vowelsCount  = newString.length();
-		
+	}
+	
+	public void computeSpacePositions() {		
 		////Positions of each space
 		//compute number of spaces inside userInput
 		newString = userInput.replaceAll("[^ ]", "");
