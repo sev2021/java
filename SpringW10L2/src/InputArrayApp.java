@@ -27,5 +27,4 @@ public class InputArrayApp {
 		}
 		System.out.println(Arrays.toString(strArray) + ".." + arraySum + ".." + arrayMax);
 	}
-
 }
