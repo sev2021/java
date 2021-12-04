@@ -11,22 +11,21 @@ public class InputArrayApp {
 	public static void main(String[] args) {
 		////INPUT
 		//declare variable
-		int arraySum = 0, arrayMax = 0;
-		int[] intArray;
+		int arrayInt, arraySum = 0, arrayMax = 0;
 		String[] strArray;
 		
 		Scanner keyb = new Scanner(System.in);
 		
 		//set method
 		strArray = keyb.next().split(",");
-		intArray = new int[strArray.length];
-		System.out.println(Arrays.toString(strArray) + strArray.length);
-		for(int i=0; i<strArray.length; i++) {
-			intArray[i] = Integer.parseInt(strArray[i]);
-			arraySum += intArray[i];
-			if(i>0 && arrayMax < intArray[i] || i==0) arrayMax = intArray[i];
+		arrayInt = Integer.parseInt(strArray[0]);
+		// no integer array needed - use singular value "arrayInt" instead:
+		for(String justString: strArray) {
+			arrayInt = Integer.parseInt(justString);
+			arraySum += arrayInt;
+			if(arrayMax < arrayInt) arrayMax = arrayInt;
 		}
-		System.out.println(Arrays.toString(intArray) + intArray.length + ".." + arraySum + ".." + arrayMax);
+		System.out.println(Arrays.toString(strArray) + ".." + arraySum + ".." + arrayMax);
 	}
 
 }
