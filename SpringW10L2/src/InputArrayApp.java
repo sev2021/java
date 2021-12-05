@@ -16,7 +16,7 @@ public class InputArrayApp {
 		System.out.println("Enter array data (integers) separated by coma \",\"");
 		Scanner keybInput = new Scanner(System.in);
 		myArray.computeMaxSum(keybInput.next());
-		 
+	
 		//get Max method (method 2)
 		System.out.println(myArray.getMax());
 		//get Max method (method 3)
