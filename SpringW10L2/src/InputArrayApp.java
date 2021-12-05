@@ -6,25 +6,19 @@
  * -1 method that returns the sum
 */
 import java.util.Scanner;
-import java.util.Arrays;
 public class InputArrayApp {
 	public static void main(String[] args) {
 		////INPUT
-		//declare variable
-		int arrayInt, arraySum = 0, arrayMax = 0;
-		String[] strArray;
+		//declare variable and create objects
+		InputArray myArray = new InputArray();
 		
-		Scanner keyb = new Scanner(System.in);
+		//set and compute (method 1)
+		System.out.println("Enter array data (integers) separated by coma \",\"");
+		Scanner keybInput = new Scanner(System.in);
+		myArray.computeMaxSum(keybInput.next());
 		
-		//set method
-		strArray = keyb.next().split(",");
-		arrayInt = Integer.parseInt(strArray[0]);
-		// no integer array needed - use singular value "arrayInt" instead:
-		for(String justString: strArray) {
-			arrayInt = Integer.parseInt(justString);
-			arraySum += arrayInt;
-			if(arrayMax < arrayInt) arrayMax = arrayInt;
-		}
-		System.out.println(Arrays.toString(strArray) + ".." + arraySum + ".." + arrayMax);
+		//get Max method (method 2)
+		System.out.println(myArray.getMax());
+		System.out.println(myArray.getSum());
 	}
 }
