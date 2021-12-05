@@ -24,7 +24,7 @@ public class InputArray {
 			if(arrayMax < arrayInt) arrayMax = arrayInt;
 		}
 	}
-
+ 
 	////OUTPUT
 	//get
 	public String getMax() {
