@@ -11,10 +11,10 @@ public class InputArrayApp {
 		////INPUT
 		//declare variable and create objects
 		InputArray myArray = new InputArray();
+		Scanner keybInput = new Scanner(System.in);
 		
 		//set and compute (method 1)
-		System.out.println("Enter array data (integers) separated by coma \",\"");
-		Scanner keybInput = new Scanner(System.in);
+		System.out.println("Enter array data (integers) separated by coma \",\"");	
 		myArray.computeMaxSum(keybInput.next());
 	
 		//get Max method (method 2)
