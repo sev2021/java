@@ -5,7 +5,6 @@
  * -1 method that returns the max
  * -1 method that returns the sum
 */
-import java.util.Arrays;
 public class InputArray {
 	////INPUT
 	//declare variable

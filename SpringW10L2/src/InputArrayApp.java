@@ -19,6 +19,7 @@ public class InputArrayApp {
 		
 		//get Max method (method 2)
 		System.out.println(myArray.getMax());
+		//get Max method (method 3)
 		System.out.println(myArray.getSum());
 	}
 }
