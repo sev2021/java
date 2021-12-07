@@ -22,6 +22,7 @@ public class EvenOddApp {
 			userInput = keyboard.next();
 		}while("01".indexOf(userInput) ==  -1);
 		
+		
 		//set, compute, get
 		myEO.doEvenOdd(userInputArray, userInput);
 	}

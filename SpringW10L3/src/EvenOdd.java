@@ -33,6 +33,7 @@ public class EvenOdd {
 					resultArray[j] = i;
 					j++;
 				}
+				
 			}
 		}
 		System.out.println(Arrays.toString(resultArray));
