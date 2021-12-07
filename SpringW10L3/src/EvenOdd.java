@@ -35,7 +35,6 @@ public class EvenOdd {
 				}
 			}
 		}
-		
 		System.out.println(Arrays.toString(resultArray));
 		return resultArray;
 	}

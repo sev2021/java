@@ -24,6 +24,5 @@ public class EvenOddApp {
 		
 		//set, compute, get
 		myEO.doEvenOdd(userInputArray, userInput);
-
 	}
 }
