@@ -16,7 +16,7 @@ public class Animal {
 		System.out.println("You fed the animal.");
 	}
 	
-	public void animalMakesSound(String animalSound) {
+	public void makeSound(String animalSound) {
 		System.out.println(animalSound);
 	}
 }
