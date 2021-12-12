@@ -1,4 +1,4 @@
-public class SaleBook extends SaleItem{
+public class SaleBook extends SaleItem{ //subclass
 	//declare variables
 	private String title;
 	private String author;

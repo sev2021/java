@@ -1,4 +1,4 @@
-public class SaleItem {
+public class SaleItem { //superclass
 	//declare variables
 	private String name;
 	private int stock;
@@ -31,7 +31,7 @@ public class SaleItem {
 	public void getInfo() {
 		System.out.println("==== ITEM STOCK INFO ====");
 		System.out.println("We have " + stock + " " + name + "s in stock");
-		System.out.println("Price for " + name + " is " + price);
-		System.out.println("=========================");
+		System.out.format("Price for " + name + " is %.2f", price);
+		System.out.println("\n=========================");
 	}
 }

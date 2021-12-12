@@ -1,4 +1,4 @@
-public class SaleApp {
+public class SaleApp { //class app
 	public static void main(String[] agrs) {
 		SaleItem pen1 = new SaleItem("pen");
 		SaleBook book1 = new SaleBook("Java for Dumies", "Bary Burd");
