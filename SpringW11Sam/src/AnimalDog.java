@@ -15,7 +15,6 @@ public class AnimalDog extends Animal {
 	}
 	
 	public String getSound() {
-		
 		return barkSound[(int)(Math.random() * 3)];
 	}
 	
