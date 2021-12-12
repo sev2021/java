@@ -1,5 +1,5 @@
 public class SaleItem {
-	//declate variable
+	//declare variables
 	private String name;
 	private int stock;
 	private double price;
@@ -29,7 +29,9 @@ public class SaleItem {
 	
 	//output
 	public void getInfo() {
-		System.out.println("We have " + stock + " " + name + "s in stock.");
+		System.out.println("==== ITEM STOCK INFO ====");
+		System.out.println("We have " + stock + " " + name + "s in stock");
 		System.out.println("Price for " + name + " is " + price);
+		System.out.println("=========================");
 	}
 }
