@@ -1,7 +1,7 @@
 
 public class Module {
 	//declare variable
-	private String name;
+	String name;
 	private float marks;
 	
 	//constructor
@@ -10,12 +10,20 @@ public class Module {
 		this.marks = 0.0f;
 	}
 	
-	//setters
+	//set methods
 	public void setName(String name) {
 		this.name = name;
 	}
 	public void setMarks(float marks) {
 		this.marks = marks;
+	}
+	
+	//get methods
+	public String getName() {
+		return this.name;
+	}
+	public float getMarks() {
+		return this.marks;
 	}
 	
 }
