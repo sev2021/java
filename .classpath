@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="SpringW021"/>
+	<classpathentry kind="src" path="SpringW04coded/src"/>
+	<classpathentry kind="src" path="SpringW04L1/src"/>
+	<classpathentry kind="src" path="SpringW04L2/src"/>
+	<classpathentry kind="src" path="SpringW05L0/src"/>
+	<classpathentry kind="src" path="SpringW05L1/src"/>
+	<classpathentry kind="src" path="SpringW05L2/src"/>
+	<classpathentry kind="src" path="SpringW05L3/src"/>
+	<classpathentry kind="src" path="SpringW05Ladv/src"/>
+	<classpathentry kind="src" path="SpringW06/src"/>
+	<classpathentry kind="src" path="SpringW06L3/src"/>
+	<classpathentry kind="src" path="SpringW07L1/src"/>
+	<classpathentry kind="src" path="SpringW07L2/src"/>
+	<classpathentry kind="src" path="SpringW07L3/src"/>
+	<classpathentry kind="src" path="SpringW07L4/src"/>
+	<classpathentry kind="src" path="Springw08L2/src"/>
+	<classpathentry kind="src" path="SpringW08L3/src"/>
+	<classpathentry kind="src" path="SpringW08L4/src"/>
+	<classpathentry kind="src" path="SpringW08L5/src"/>
+	<classpathentry kind="src" path="SpringW09expl/src"/>
+	<classpathentry kind="src" path="SpringW09L1/src"/>
+	<classpathentry kind="src" path="SpringW10Ben/src"/>
+	<classpathentry kind="src" path="SpringW10Ben16/src"/>
+	<classpathentry kind="src" path="SpringW10L1/src"/>
+	<classpathentry kind="src" path="SpringW10L2/src"/>
+	<classpathentry kind="src" path="SpringW10L3/src"/>
+	<classpathentry kind="src" path="SpringW10Sam/src"/>
+	<classpathentry kind="src" path="SpringW11/src"/>
+	<classpathentry kind="src" path="SpringW11Sam/src"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

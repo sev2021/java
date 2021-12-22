@@ -10,6 +10,12 @@ public class Module {
 		this.marks = 0.0f;
 	}
 	
+	//constructor_2
+	public Module(String name, float marks) {
+		this.name = name;
+		this.marks = marks;
+	}
+	
 	//set methods
 	public void setName(String name) {
 		this.name = name;
