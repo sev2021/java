@@ -7,20 +7,30 @@ public class HRApp {
 		int age;
 		float baseSalary = 25_000;
 		
-		Employee[] empArray = new Employee[3];
+//		Employee[] empArray = new Employee[3];
+//		
+//		for(int i=0; i<3; i++ ) {
+//			empArray[i] = new Employee(baseSalary);
+//			empArray[i].setEmployee(
+//					new Scanner(System.in).next(),
+//					new Scanner(System.in).next(),
+//					new Scanner(System.in).nextInt()					
+//					);
+//		}
+//		
+//		for(int i=0; i<3; i++) {
+//			//System.out.println(empArray[i].getClass());
+//			System.out.println(empArray[i].getEmployee());
+//		}
 		
-		for(int i=0; i<3; i++ ) {
-			empArray[i] = new Employee(baseSalary);
-			empArray[i].setEmployee(
-					new Scanner(System.in).next(),
-					new Scanner(System.in).next(),
-					new Scanner(System.in).nextInt()					
-					);
-		}
+		Employee John = new Employee(20_000);
+		John.setEmployee("John", "Bravo", 14);
+		System.out.println(John.getEmployee());
 		
-		for(int i=0; i<3; i++) {
-			//System.out.println(empArray[i].getClass());
-			System.out.println(empArray[i].getEmployee());
-		}
+		Employee Jane = new SaleStaff(20_000);
+		Jane.setEmployee("Jane", "Beep", 24);
+		System.out.println(Jane.getEmployee());
+		
+		
 	}
 }

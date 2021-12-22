@@ -6,7 +6,7 @@ public class Employee {
 	////INPUT
 	//declare variables and objects
 	
-	private float baseSalary, computedSalary; 
+	public float baseSalary, computedSalary; 
 	private String fName, lName;
 	private int age;
 	
