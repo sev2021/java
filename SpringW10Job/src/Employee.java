@@ -13,6 +13,9 @@ public class Employee {
 	public Employee(float baseSalary) {
 		this.baseSalary = baseSalary;
 		this.computedSalary = baseSalary;
+		this.fName = "";
+		this.lName = "";
+		this.age = 0;
 	}
 	
 	//set method
@@ -25,8 +28,8 @@ public class Employee {
 	
 	//get method
 	public String getEmployee() {
-		System.out.println("Employee: " + fName + " " + lName + " earns " + computedSalary);	
-		return "Employee: " + fName + " " + lName + " earns " + computedSalary;
+		if(age < 18) computedSalary *= 0.8;	
+		return fName + " " + lName + ", age " + age + " earns " + computedSalary;
 	}
 	
 
