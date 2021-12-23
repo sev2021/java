@@ -12,7 +12,7 @@ public class Employee {
 		this.lName = "";
 		this.age = -1;
 		this.baseSalary = -1;
-		this.calcSalary = 1;
+		this.calcSalary = -1;
 	}
 	
 	public void setEmployee(String fName,
@@ -25,6 +25,7 @@ public class Employee {
 	}
 	
 	public String getEmployee() {
+		calcSalary = baseSalary;
 		return "Employee data"
 				+ "\nName: " + fName + " " + lName
 				+ "\nDepartment: " + department
