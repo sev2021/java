@@ -6,7 +6,7 @@ public class DoArray {
 		String[] userArray;
 		
 		do {
-			userInput = new Scanner(System.in).nextLine();
+			userInput = new Scanner(System.in).nextLine(); // use nextLine() not just next()!!
 			userString += userInput + ",";
 		}
 		while(!userInput.isEmpty());
