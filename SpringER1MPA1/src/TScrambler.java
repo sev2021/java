@@ -15,9 +15,11 @@ public class TScrambler {
 	//declare vars and methods
 	private String userInput;
 	private String[] inputArray;
+	private String[] outputArray;
 	
 	public TScrambler(){
 		inputArray = new String[0];
+		outputArray = new String[0];
 	}
 	
 	//set method
@@ -25,6 +27,17 @@ public class TScrambler {
 		this.inputArray = inputArray;
 	}
 	
+	//compute method
+	public void computeInputArray() {
+		//validation
+		for(int i=0; i<inputArray.length; i++) {
+			if(!Character.isUpperCase(inputArray[i].charAt(0))
+			|| inputArray[i].charAt(inputArray[i].length() - 1) != '.') {
+				System.out.println("Validation does not pass for: " +  inputArray[i]);
+			}
+		}
+		
+	}
 	
 	//get method
 	public String[] getScrambledArray() {

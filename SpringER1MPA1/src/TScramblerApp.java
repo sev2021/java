@@ -16,17 +16,24 @@ public class TScramblerApp {
 	public static void main(String[] args) {
 		////IMPUT
 		//declare vars and objects
-		String userInput;
-		String[] inputArray = {"aa", "bb"};
+		String[] inputArray = {"no data was entered"};
+		int inputArraySize = 0;
 		
 		TScrambler doScramble = new TScrambler();
 		
 		//set
-		userInput = JOptionPane.showInputDialog("Enter string");
-		//get
-		System.out.print("You entered: " + userInput);
+		inputArraySize = Integer.parseInt(JOptionPane.showInputDialog("How many paragraphs? "));
+		inputArray = new String[inputArraySize];
 		
+		for(int i = 1; i<inputArraySize + 1; i++) {
+			inputArray[i - 1] = JOptionPane.showInputDialog("Enter string " + i + " of " + inputArraySize);
+		}
 		doScramble.setInputArray(inputArray);
+		
+		//compute
+		doScramble.computeInputArray();
+		
+		//get
 		System.out.print(Arrays.toString(doScramble.getScrambledArray()));
 		
 	}
