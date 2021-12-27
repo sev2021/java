@@ -11,5 +11,24 @@
  •	Replace each vowel with your initials. This should be hard coded into the application and is not required as user input.
 */
 public class TScrambler {
+	////INPUT
+	//declare vars and methods
+	private String userInput;
+	private String[] inputArray;
+	
+	public TScrambler(){
+		inputArray = new String[0];
+	}
+	
+	//set method
+	public void setInputArray(String[] inputArray) {
+		this.inputArray = inputArray;
+	}
+	
+	
+	//get method
+	public String[] getScrambledArray() {
+		return this.inputArray;
+	}
 
 }

@@ -10,18 +10,24 @@
  * 	The scrambled text should start with the number of characters in the initial text.
  •	Replace each vowel with your initials. This should be hard coded into the application and is not required as user input.
 */
-
+import java.util.Arrays;
 import javax.swing.JOptionPane;
 public class TScramblerApp {
 	public static void main(String[] args) {
 		////IMPUT
 		//declare vars and objects
 		String userInput;
+		String[] inputArray = {"aa", "bb"};
+		
+		TScrambler doScramble = new TScrambler();
 		
 		//set
 		userInput = JOptionPane.showInputDialog("Enter string");
 		//get
 		System.out.print("You entered: " + userInput);
+		
+		doScramble.setInputArray(inputArray);
+		System.out.print(Arrays.toString(doScramble.getScrambledArray()));
 		
 	}
 }
