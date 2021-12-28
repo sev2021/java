@@ -10,7 +10,6 @@
  * 	The scrambled text should start with the number of characters in the initial text.
  •	Replace each vowel with your initials. This should be hard coded into the application and is not required as user input.
 */
-import java.util.Arrays;
 import javax.swing.JOptionPane;
 public class TScramblerApp {
 	public static void main(String[] args) {

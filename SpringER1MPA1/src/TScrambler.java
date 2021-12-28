@@ -51,5 +51,4 @@ public class TScrambler {
 	public String[] getScrambledArray() {
 		return this.inputArray;
 	}
-
 }
