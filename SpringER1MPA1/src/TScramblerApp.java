@@ -17,8 +17,11 @@ public class TScramblerApp {
 		////IMPUT
 		//declare vars and objects
 		String[] inputArray = {"no data was entered"};
+		String[] outputArray;
+		String outputStrings = "";
 		int inputArraySize = 0;
 		
+		//create object doScramble using TScrambler class
 		TScrambler doScramble = new TScrambler();
 		
 		//set
@@ -33,8 +36,14 @@ public class TScramblerApp {
 		//compute
 		doScramble.computeInputArray();
 		
+		////OUTPUT
 		//get
-		System.out.print(Arrays.toString(doScramble.getScrambledArray()));
+		outputArray = doScramble.getScrambledArray();
 		
+		for(String outString: outputArray) {
+			outputStrings += outString + "\n";
+		}
+		
+		JOptionPane.showMessageDialog(null, outputStrings);
 	}
 }

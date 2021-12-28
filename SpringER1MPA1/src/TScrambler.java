@@ -19,7 +19,6 @@ public class TScrambler {
 	
 	public TScrambler(){
 		inputArray = new String[0];
-		outputArray = new String[0];
 	}
 	
 	//set method
@@ -34,6 +33,15 @@ public class TScrambler {
 			if(!Character.isUpperCase(inputArray[i].charAt(0))
 			|| inputArray[i].charAt(inputArray[i].length() - 1) != '.') {
 				System.out.println("Validation does not pass for: " +  inputArray[i]);
+				System.exit(0);
+			}
+		}
+		
+		for(int i=0; i<inputArray.length; i++) {
+			inputArray[i] = inputArray[i].length() + inputArray[i];
+			String[] vowels = {"a","e","i","o","u","A","I","U","E","O"};
+			for(String vowel : vowels) {
+				inputArray[i] = inputArray[i].replace(vowel, "##");
 			}
 		}
 		
