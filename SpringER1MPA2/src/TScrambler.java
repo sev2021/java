@@ -27,17 +27,26 @@ public class TScrambler {
 	
 	//compute method
 	public void computeArray() {
-//		validation
 		for(String validString: userInputArray) {
-			System.out.println(validString);
-			int charOn = validString.indexOf('a');
-			if( charOn == -1) System.out.println("BAD Validating!");
-			if( validString.indexOf('a', charOn) == -1) System.out.println("BAD Validating!");
-			System.out.println("END Validating!");
+			int valNumber = 0;
+			for(int i=0; i<validString.length(); i++) {
+				if(validString.charAt(i) == ' ') valNumber ++;
+				if(valNumber > 1) break;
+			}
+			if(valNumber < 2) System.out.println("BAD validation!");
 		}
-	}
 		
-//		validation2
+//		validation2  // double check for space in string
+//		for(String validString: userInputArray) {
+//			System.out.println("Validate string:" + validString);
+//			int letterOn = validString.indexOf(" ");
+//			if(letterOn == -1) System.exit(0);
+//			if(validString.indexOf(" ", letterOn) == -1) System.exit(0);
+//			System.out.println("GOOD Validating!");
+//		}
+
+		
+//		validation3  // using strings lengths
 //		for(String validString: userInputArray) {
 //			System.out.println("Validate string:" + validString);
 //			if(validString.length() - validString.replaceAll(" ", "").length() < 2) {
@@ -45,7 +54,23 @@ public class TScrambler {
 //				System.exit(0);
 //			}
 //		}
-	
+
+		String key = "aeiuoAEIUO";  // all vowels
+		for(int i=0; i<userInputArray.length; i++) { // iterate each string
+			
+			for(String s1: userInputArray[i].split("")) { //iterate each letter s1
+				if(key.indexOf(s1) == -1) {
+					// replaceAll() below takes only Strings
+					// replace() takes only chars so can't be used for "456"
+					userInputArray[i] = userInputArray[i].replaceAll(s1, "456");
+					
+					System.out.println(s1); // this is only for debugging
+				}
+			}
+			
+		}
+		
+	}
 	
 	//getter method
 	public String[] getComputedArray() {
