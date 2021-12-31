@@ -16,15 +16,25 @@ import javax.swing.JOptionPane;
 public class TScramblerApp {
 	public static void main(String[] args){
 		////INPUT
-		//declare variables and obejects
+		//declare variables and objects
 		String userInput;
 		int userTurns;
+		TScrambler doScramble = new TScrambler();
 		
+		////PROCESS Q1
 		userTurns = Integer.parseInt(JOptionPane.showInputDialog("How many paragraphs?"));
+		for(int i=0; i<userTurns; i++) {
+			userInput = JOptionPane.showInputDialog("Enter paragraph " + (i+1) + " of " + userTurns);
+			
+			doScramble.setUserInput(userInput);
+			doScramble.computeUserInput();
+			
+			JOptionPane.showMessageDialog(null, "Original paragraph:\n"
+					+ userInput + "\nScrambled paragraph:\n" + doScramble.getUserInput());	
+		}
 		
-		////PROCESS
-		for(int i=0; i<userTurns; )
-		userInput = JOptionPane.showInputDialog("How many paragraphs?");
+		////PROCESS Q2
+		
 		
 	}
 }
