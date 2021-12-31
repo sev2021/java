@@ -16,7 +16,7 @@ public class TScramblerApp {
 	public static void main(String[] agrs) {
 		////INPUT
 		//declare variable
-		String userInput;
+		String userInput, computedOutput;
 		String[] userInputArray;
 		int inputArraySize;
 		//create object
@@ -38,7 +38,9 @@ public class TScramblerApp {
 		////OUTPUT
 		//get
 		System.out.print(Arrays.toString(doScramble.getComputedArray()));
+		computedOutput = "Computed screambled paragraphs are:\n";
+		for(String st: doScramble.getComputedArray()) computedOutput += st + ",\n";
 		
-		
+		JOptionPane.showMessageDialog(null, computedOutput);
 	}
 }

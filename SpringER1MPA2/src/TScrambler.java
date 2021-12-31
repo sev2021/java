@@ -60,12 +60,13 @@ public class TScrambler {
 			
 			for(String s1: userInputArray[i].split("")) { //iterate each letter s1
 				if(key.indexOf(s1) == -1) {
+					System.out.println("No letter" + s1);
 					// replaceAll() below takes only Strings
-					// replace() takes only chars so can't be used for "456"
-					userInputArray[i] = userInputArray[i].replaceAll(s1, "456");
+					// replace() takes only chars so can't be used for "<>"
+					userInputArray[i] = userInputArray[i].replaceAll(s1, "<>");
 					
-					System.out.println(s1); // this is only for debugging
 				}
+				else System.out.println("Letter" + s1 + " at " + key.indexOf(s1));
 			}
 			
 		}
