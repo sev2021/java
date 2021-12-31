@@ -9,6 +9,13 @@
  * - Scrambling:
  * 	The scrambled text should start with the number of characters in the initial text.
  •	Replace each vowel with your initials. This should be hard coded into the application and is not required as user input.
+ * - Third Task:
+ * The method should take in 2 parameters; an array of words, and a number. 
+ * The method should search the array of words and find and output the words matching the given number. 
+ * If there are multiple words with the same length as the given number, 
+ * then the method should find all the words that have the same length as that number. 
+ * The words computed by the method should be stored in an array of words. 
+ * The method should return the computed array of words.
 */
 public class TScrambler {
 	////INPUT
@@ -33,7 +40,7 @@ public class TScrambler {
 			if(!Character.isUpperCase(inputArray[i].charAt(0))
 			|| inputArray[i].charAt(inputArray[i].length() - 1) != '.') {
 				System.out.println("Validation does not pass for: " +  inputArray[i]);
-				System.exit(0);
+				//System.exit(0);
 			}
 		}
 		
@@ -41,7 +48,7 @@ public class TScrambler {
 			inputArray[i] = inputArray[i].length() + inputArray[i];
 			String[] vowels = {"a","e","i","o","u","A","I","U","E","O"};
 			for(String vowel : vowels) {
-				inputArray[i] = inputArray[i].replace(vowel, "##");
+				inputArray[i] = inputArray[i].replace("a", "##");
 			}
 		}
 		
