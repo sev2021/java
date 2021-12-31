@@ -19,12 +19,13 @@ then the method should find all the words that have the same length as that numb
 The words computed by the method should be stored in an array of words. 
 The method should return the computed array of words.
 */
-import java.util.Arrays;
+import java.util.Arrays;  //DEBUG
 public class TScrambler {
 	////INPUT
 	//declare variable
 	private String userInput, userOutput;
 	private String[] userInputArray;
+	private String[] userOutputArray;
 	private int userInputLength;
 	
 	//constructor
@@ -32,12 +33,19 @@ public class TScrambler {
 	}
 	
 	//set method
-	public void setUserInput(String userInput) {
+	public void setUserInput(String userInput) { //Q1
 		this.userInput = userInput;
 	}
 	
+	public void setUserInputArray(
+			String[] userInputArray,
+			int userInputLength) {  //Q2
+		this.userInputArray = userInputArray;
+		this.userInputLength = userInputLength;
+	}
+	
 	////PROCESS
-	//compute method
+	//compute method Q1
 	public void computeUserInput() {
 		//validation
 		if(!Character.isUpperCase(userInput.charAt(0)) 
@@ -59,8 +67,33 @@ public class TScrambler {
 		System.out.println(userOutput);
 	}
 	
-	//get method
+	//compute method Q2
+	public void computeUserInputArray() {
+		int userOutputLength = 0;
+		for(String s: userInputArray) {
+			if(s.length() == userInputLength)userOutputLength++;
+		}
+		
+		userOutputArray = new String[userOutputLength];
+		
+		int userOutputIndex = 0;
+		for(String s: userInputArray) {
+			if(s.length() == userInputLength) {
+				userOutputArray[userOutputIndex] = s;
+				userOutputIndex ++;
+			}
+		}
+		System.out.println(Arrays.toString(userOutputArray)); //DEBUG
+	}
+	
+	
+	//get method Q1
 	public String getUserInput() {
 		return userOutput;
+	}
+	
+	//get method Q2
+	public String[] getUserOutputArray() {
+		return userOutputArray;
 	}
 }
