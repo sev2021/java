@@ -21,5 +21,16 @@ The words computed by the method should be stored in an array of words.
 The method should return the computed array of words.
 */
 public class TScrambler {
-
+	////INPUT
+	//input
+	private String userInput;
+	
+	//constructor
+	TScrambler() {}
+	
+	//set method
+	public void setUserINput(string userInput) {
+		this.userInput = userInput;
+	}
+	
 }
