@@ -20,17 +20,78 @@ then the method should find all the words that have the same given starting char
 The words computed by the method should be stored in an array of words. 
 The method should return the computed array of words.
 */
+import java.util.Arrays;
 public class TScrambler {
 	////INPUT
 	//input
-	private String userInput;
+	private String userInput, userOutput;
+	private String[] userInputArray;
+	private String[] userOutputArray;
+	private int userInputLenght, letterCheckLength;
+	private char userChekLetter;
 	
 	//constructor
 	TScrambler() {}
 	
-	//set method
-	public void setUserINput(string userInput) {
+	//set methods
+	public void setUserInput(String userInput) {
 		this.userInput = userInput;
 	}
 	
+	public void setUserInput(String[] userInputArray, char checkLetter) {
+		this.userInputArray = userInputArray;
+		this.userChekLetter = checkLetter;	
+	}
+	
+	//compute methods
+	public void computeUserInput() {
+		//validation
+	    if(userInput.indexOf(" ",userInput.indexOf(" ") + 1) == -1) {
+	    	System.out.println("BAD VALIDATION - no 2 spaces!");
+	    }
+	    
+	    //scrambling
+	    userInputLenght = userInput.length();
+	    userInputArray = userInput.split("");
+	    String key = "aeiuoAEIUO";
+	    for(int i=0; i<userInputLenght; i++) {
+	    	if(key.indexOf(userInputArray[i]) == -1) {
+	    		userInputArray[i] = "<>";
+	    	}
+	    }
+	    
+	    userOutput = "";
+	    for(String s: userInputArray) userOutput += s;
+	    userOutput += userInputLenght;
+	    System.out.println(userOutput); //DEBUG
+	    
+	} // end of computeUserInput()
+	
+	public void computerLetterCheck() {
+		letterCheckLength = 0;
+		for(int i=0; i<userInputArray.length-1; i++) {
+			if(userInputArray[i].charAt(0) == userChekLetter) {
+				System.out.println(userInputArray[i]); //DEBUG
+				letterCheckLength ++;
+			}
+		}
+		
+		userOutputArray = new String[letterCheckLength];
+		letterCheckLength = 0;
+		
+		for(int i=0; i<userInputArray.length-1; i++) {
+			if(userInputArray[i].charAt(0) == userChekLetter) {
+				userOutputArray[letterCheckLength] = userInputArray[i];
+				letterCheckLength ++;
+			}
+		}
+		
+		System.out.println(Arrays.toString(userOutputArray));
+		
+	} // end of computerLetterCheck()
+	
+	//get method
+	public String getUserInput() {
+		return userOutput;
+	}
 }

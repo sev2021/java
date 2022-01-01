@@ -25,22 +25,43 @@ public class TScramblerApp {
 	public static void main(String[] args) {
 		////INPUT
 		//declare variables and objects
-		String userInput;
+		String userInput, userOutput, f2Input;
 		TScrambler doScramble = new TScrambler();
 		
 		//PROCESS LOOP
 		do{
 			//setter
-			userInput = JOptionPane.showInputDialog("Enter paragraph to scramble:");
+			userInput = JOptionPane.showInputDialog("Enter paragraph to scramble or [Cancel] to finish:");
+			if(userInput == null) break;
 			doScramble.setUserInput(userInput);
 			
 			//computer
 			doScramble.computeUserInput();
 			
 			//getter
-			doScramble.getUserInput();
+			userOutput = "Original paragraph:\n" + userInput 
+					+ "\nScrambled paragraph:\n" +  doScramble.getUserInput();
+			JOptionPane.showMessageDialog(null, userOutput);
 		}
-		while(JOptionPane.showConfirmDialog(null, "Would like to add\nanother paragraph?") == 0);
+		while(JOptionPane.showConfirmDialog(null, "Would like to scramble\nanother paragraph?") == 0);
 		
+		////PROCESS of F2
+		//setter
+		userInput = "";
+		do{
+			f2Input = JOptionPane.showInputDialog("Add word to check, or [Cancel] to proceed:");
+			userInput += f2Input + ",";
+		}
+		while(f2Input != null);
+		System.out.println(userInput);
+		do{
+			f2Input = JOptionPane.showInputDialog("Set letter to check:");
+		}
+		while(f2Input == null || !Character.isLetter(f2Input.charAt(0)));
+		
+		doScramble.setUserInput(userInput.split(","), f2Input.charAt(0));
+		
+		//computer
+		doScramble.computerLetterCheck();
 	}
 }
