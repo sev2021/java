@@ -1,0 +1,43 @@
+ER1
+Input Validation:
+The text must start with an upper-case letter and end with a full stop. 
+Validation should take place in the instantiable class and will halt the 
+running of the application if validation does not pass
+Scrambling:
+The scrambled text should start with the number of characters in the initial text.
+Replace each vowel with your initials. 
+This should be hard coded into the application and is not required as user input.
+ER2
+Input Validation:
+The text must contain at least 2 spaces. Validation should take place in the instantiable 
+class and will halt the running of the application if validation does not pass.
+Scrambling:
+Every character that is not a vowel should be replaced by the last 3 digits of your student number. 
+This should be hard coded into the application and is not required as user input.
+The encoded String ends with the number of characters in the initial text.
+ 
+MPA1
+Ask the user at the beginning of the application how many paragraphs they would like to scramble, 
+and ensure that the application scrambles that amount of sentences. 
+This should be completed using a graphical interface such as JOptionPane.
+MPA2
+Ask the user to provide a paragraph and after the paragraph is encoded, 
+create a popup that asks the user if they would like to encode another paragraph. 
+As long as the user clicks “yes” the application repeat. When the user clicks “no”, 
+no other sentences are scrambled. 
+This should be completed using a graphical interface such as JOptionPane.
+
+F1
+The method should take in 2 parameters; an array of words, and a number. 
+The method should search the array of words and find and output the words matching the given number. 
+If there are multiple words with the same length as the given number, 
+then the method should find all the words that have the same length as that number. 
+The words computed by the method should be stored in an array of words. 
+The method should return the computed array of words.
+F2
+The method should accept as parameters an array of words and a character. 
+The method should then search the array of words and find the words that begin with that character. 
+If there are multiple words with the same starting character, 
+then the method should find all the words that have the same given starting character. 
+The words computed by the method should be stored in an array of words. 
+The method should return the computed array of words.
