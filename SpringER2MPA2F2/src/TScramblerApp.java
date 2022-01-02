@@ -53,15 +53,15 @@ public class TScramblerApp {
 			userInput += f2Input + ",";
 		}
 		while(f2Input != null);
-		System.out.println(userInput);
+		System.out.println(userInput); //DEBUG
 		do{
 			f2Input = JOptionPane.showInputDialog("Set letter to check:");
 		}
 		while(f2Input == null || !Character.isLetter(f2Input.charAt(0)));
 		
-		doScramble.setUserInput(userInput.split(","), f2Input.charAt(0));
+		//doScramble.setUserInput(userInput.split(","), f2Input.charAt(0));
 		
 		//computer
-		doScramble.computerLetterCheck();
+		doScramble.computerLetterCheck(userInput.split(","), f2Input.charAt(0));
 	}
 }

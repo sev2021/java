@@ -38,10 +38,10 @@ public class TScrambler {
 		this.userInput = userInput;
 	}
 	
-	public void setUserInput(String[] userInputArray, char checkLetter) {
-		this.userInputArray = userInputArray;
-		this.userChekLetter = checkLetter;	
-	}
+//	public void setUserInput(String[] userInputArray, char checkLetter) {
+//		this.userInputArray = userInputArray;
+//		this.userChekLetter = checkLetter;	
+//	}
 	
 	//compute methods
 	public void computeUserInput() {
@@ -67,7 +67,9 @@ public class TScrambler {
 	    
 	} // end of computeUserInput()
 	
-	public void computerLetterCheck() {
+	public void computerLetterCheck(String[] userInputArray, char checkLetter) {
+		this.userInputArray = userInputArray;
+		this.userChekLetter = checkLetter;
 		letterCheckLength = 0;
 		for(int i=0; i<userInputArray.length-1; i++) {
 			if(userInputArray[i].charAt(0) == userChekLetter) {
