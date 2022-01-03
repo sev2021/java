@@ -6,6 +6,7 @@ Java links:
   
   int tabl[ ] = {1, 2, 3};  
   int tabl[ ] = new int[3];  
+  int tabl[ ] = new int[]{1,2,3};  
   -or-  
   int[] tabl;   //array declaration   
   tabl = new int[4];  //array initiation for size of 4  
