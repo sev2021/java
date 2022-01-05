@@ -26,6 +26,5 @@ public class DefPassApp {
 		JOptionPane.showMessageDialog(null, "For name: " + userInput 
 				+ "\ndefault password will be:\n" + myPass.getUserInput());
 		
-		
 	}
 }

@@ -10,15 +10,17 @@ public class DefPass {
 		userNo = 1;
 	}
 	
+	//setter method
 	public void setUserInput(String userInput, int userNo) {
 		this.userInput = userInput;
 		this.userNo = userNo;
 
 	}
 	
+	//compute method
 	public void computeUserInput() {
 		userOutput = "";
-		System.out.println(userInput + "-" + userNo); //DEBUG
+		//System.out.println(userInput + "-" + userNo); //DEBUG
 		for(int i=0; i<userInput.length(); i++) {
 			if((i + 1)%userNo != 0) {
 				userOutput += userInput.charAt(i);
@@ -26,9 +28,10 @@ public class DefPass {
 			
 		}
 		userOutput = userOutput.replace(" ", "!");
-		System.out.println(userOutput); //DEBUG
+		//System.out.println(userOutput); //DEBUG
 	}
 	
+	//getter method
 	public String getUserInput() {
 		return userOutput;
 	}
