@@ -1,0 +1,30 @@
+Question A
+A1 A startup company has hired you to develop an application to create default passwords for their
+employees accounts. The application prompts the user for two pieces of information, first to enter a
+line of text (in lowercase letters) in the following format "forename surname", and second to enter a
+number n, where n is any of the numbers from 3 to 5 inclusive. Your application must ensure that
+the user provides a valid value for n, that is either 3 or 4 or 5. Next, the application uses the entered
+text and the number n to create the password. The password is created using the following rules:
+a) eliminate every nth character of the initial text (i.e. every nth character of the initial text will
+not be used in the password; for example, if the number is 3, then every 3rd character of
+the initial text will not be used in the password; if the number is 4, then every 4th character
+of the initial text will not be used in the password; or if the number is 5, then every 5th
+character of the initial text will not be used in the password)
+b) each space is replaced by an exclamation mark (i.e. ‘!’)
+c) if the character is a vowel then immediately before the vowel add the uppercase letter ‘R’
+d) all the other characters of the initial text are copied as they are in the password
+1. Develop an instantiable class for this application which contains:
+A class definition
+Suitable data members (instance variables)
+A constructor
+All necessary setter methods to set the details provided by the user
+A compute method to create the password
+A getter method to return the password
+Name the instantiable class DefaultPassword.
+For example, if the instantiable class receives:
+? the text “ema smith” and the number 3 for n, then the compute method should create
+the password “Rem!sRit” (please note that according to the rule a) every 3rd character
+of the initial text has been removed)
+? the text “omar umar” and the value 5 for n, then the compute method should create the
+password “RomRarRumRar” (please note that according to the rule a) every 5th
+character of the initial text has been removed)
