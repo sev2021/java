@@ -26,22 +26,43 @@ public class TScramblerApp {
 		////INPUT
 		//declare variable and objects
 		String userInput, userOutput;
-		int userTurns;
+		String[] userInputArray;
+		int userNumber;
 		
+		//create object
 		TScrambler doScramble = new TScrambler(); 
 		
-		userTurns = Integer.parseInt(JOptionPane.showInputDialog(
-				"Enter number of paragraphs\nto scramble:"));
-		for(int i=0; i<userTurns; i++) {
-			userInput = JOptionPane.showInputDialog("Enter paragraph " 
-					+ (i+1) + " of " + userTurns + " :");
+		//set
+		//input validation
+		userInput = JOptionPane.showInputDialog(
+					"Enter number of paragraphs\nto scramble:");
+		if(userInput == null || userInput.equals("")) System.out.println("System.exit(0)"); ;
+		userNumber = Integer.parseInt(userInput);
 		
-		doScramble.setUserInput(userInput);
-		doScramble.computeUserInput();
-		userOutput = "Original paragraph: " + userInput 
-				+ "\nScrambled paragraph:" + doScramble.getUserOutput();
-		JOptionPane.showMessageDialog(null, userOutput);
+		for(int i=0; i<userNumber; i++) {
+			userInput = JOptionPane.showInputDialog("Enter paragraph " 
+					+ (i+1) + " of " + userNumber + " :");
+		
+			doScramble.setUserInput(userInput);
+			
+			////PROCESS
+			//compute
+			doScramble.computeUserInput();
+			
+			////OUTPUT
+			//get
+			userOutput = "Original paragraph: " + userInput 
+					+ "\nScrambled paragraph:" + doScramble.getUserOutput();
+			JOptionPane.showMessageDialog(null, userOutput);
 		}
+		
+		////F1 task
+		userInput = JOptionPane.showInputDialog(
+				"Enter words separated by coma (,)");
+		userInputArray = userInput.split(",");
+		userNumber = Integer.parseInt(JOptionPane.showInputDialog(
+				"Enter number of letters in word"));
+		doScramble.f1Method(userInputArray, userNumber);
 		
 	}
 }

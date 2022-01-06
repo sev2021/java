@@ -19,10 +19,13 @@ then the method should find all the words that have the same length as that numb
 The words computed by the method should be stored in an array of words. 
 The method should return the computed array of words.
 */
+import java.util.Arrays;
 public class TScrambler {
 	////INPUT
 	//declare variable
 	private String userInput, userOutput;
+	private String[] userInputArray, userOutputArray;
+	private int userNumber, userArrayLength;
 	private int userInputLength;
 	
 	//constructor
@@ -62,4 +65,26 @@ public class TScrambler {
 		return userOutput;
 	}
 	
+	public String[] f1Method(String[] userInputArray, int userNumber) {
+		this.userInputArray = userInputArray;
+		this.userNumber = userNumber;
+		
+		userArrayLength = 0; //find size of output array
+		for(String s: userInputArray) {
+			if(s.length() == userNumber) userArrayLength ++;
+		}
+		userOutputArray = new String[userArrayLength];
+		
+		userArrayLength = 0; //creating output array
+		for(String s: userInputArray) {
+			if(s.length() == userNumber) {
+				userOutputArray[userArrayLength] = s;
+				userArrayLength ++;
+			}
+		}
+		
+		//OUTPUT
+		System.out.println(Arrays.toString(userOutputArray));
+		return userOutputArray;
+	}
 }
