@@ -19,6 +19,29 @@ then the method should find all the words that have the same length as that numb
 The words computed by the method should be stored in an array of words. 
 The method should return the computed array of words.
 */
+import javax.swing.JOptionPane;
 public class TScramblerApp {
 
+	public static void main(String[] args) {
+		////INPUT
+		//declare variable and objects
+		String userInput, userOutput;
+		int userTurns;
+		
+		TScrambler doScramble = new TScrambler(); 
+		
+		userTurns = Integer.parseInt(JOptionPane.showInputDialog(
+				"Enter number of paragraphs\nto scramble:"));
+		for(int i=0; i<userTurns; i++) {
+			userInput = JOptionPane.showInputDialog("Enter paragraph " 
+					+ (i+1) + " of " + userTurns + " :");
+		
+		doScramble.setUserInput(userInput);
+		doScramble.computeUserInput();
+		userOutput = "Original paragraph: " + userInput 
+				+ "\nScrambled paragraph:" + doScramble.getUserOutput();
+		JOptionPane.showMessageDialog(null, userOutput);
+		}
+		
+	}
 }

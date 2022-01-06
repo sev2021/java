@@ -20,5 +20,46 @@ The words computed by the method should be stored in an array of words.
 The method should return the computed array of words.
 */
 public class TScrambler {
-
+	////INPUT
+	//declare variable
+	private String userInput, userOutput;
+	private int userInputLength;
+	
+	//constructor
+	public TScrambler() {}
+	
+	//set method
+	public void setUserInput(String userInput) {
+		this.userInput = userInput;
+	}
+	
+	////PROCESS
+	//compute method
+	public void computeUserInput() {
+		userOutput = "";
+		userInputLength = userInput.length();
+		//validation
+		if(!Character.isUpperCase(userInput.charAt(0)) 
+				|| userInput.charAt(userInputLength - 1) != '.' ) {
+			System.out.println("System.exit(0)"); //DEBUG
+		}
+		
+		String key = "aeiouAEIOU";
+		for(int i=0; i<userInputLength; i++) {
+			if(key.indexOf(userInput.charAt(i)) == -1) {
+				userOutput += "<>";
+			}
+			else {
+				userOutput += userInput.charAt(i);
+			}
+		}
+		System.out.println(userOutput); //DEBUG
+	}
+	
+	////OUTPUT
+	//get method
+	public String getUserOutput() {
+		return userOutput;
+	}
+	
 }
