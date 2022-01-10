@@ -22,7 +22,6 @@
  * The method should return the computed array of numbers.
  */
 import javax.swing.JOptionPane;
-import java.util.Arrays;
 public class ItemGeneratorApp {
 	public static void main(String[] args) {
 		////INPUT
@@ -41,7 +40,7 @@ public class ItemGeneratorApp {
 		
 		//set + compute + get (generate full names for Question 1)
 		////INPUT
-		itemsNumber = Integer.parseInt(JOptionPane.showInputDialog("How many items \nwould you like to create?"));
+		itemsNumber = Integer.parseInt(JOptionPane.showInputDialog("Question 1. How many items \nwould you like to create?"));
 		
 		//multiple ItemGenerator calls (Question 1)
 		for(int i=0; i<itemsNumber; i++) {
@@ -64,7 +63,7 @@ public class ItemGeneratorApp {
 		
 		////INPUT
 		//set(create paragraph array - Question 2)
-		paragraphsNumber = Integer.parseInt(JOptionPane.showInputDialog("How many paragraphs \nwould you like to create?"));
+		paragraphsNumber = Integer.parseInt(JOptionPane.showInputDialog("Question 2. How many paragraphs \nwould you like to create?"));
 		paragraphsArray = new String[paragraphsNumber];
 		
 		for(int i=0; i<paragraphsNumber; i++) {
@@ -85,3 +84,4 @@ public class ItemGeneratorApp {
 		
 	}
 }
+

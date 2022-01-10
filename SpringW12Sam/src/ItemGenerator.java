@@ -106,7 +106,5 @@ public class ItemGenerator {
 	public String getUserInput() {
 		return computedItem;
 	}
-	
-	
-	
+
 }
