@@ -21,6 +21,14 @@ public class LeapYear {
 	}
 	
 	//compute
+	// correct compute: y%4?
+	// 		false: notLeap
+	//		true: y%100?
+	//			false: isLeap
+	//			true: y%100?
+	//				true: isLeap
+	//				false: notLeap
+	// see 1st Nov 2021
 	public void computeYear() {
 		if(userYear % 400 == 0) {
 			isLeap = "a";
