@@ -5,8 +5,7 @@
  * INPUT: users enter their age and blood type
  * PROCESS: compute which blood groups the user can donate to and receive from.
  * 				based on given blood type table. Note that only 18+ can donate
- * OUTPUT: display a message outlining which blood groups the user 
- * 				can donate to and receive from
+ * OUTPUT: display a message outlining which blood groups the user can donate to and receive from
 */
 
 import javax.swing.JOptionPane;
