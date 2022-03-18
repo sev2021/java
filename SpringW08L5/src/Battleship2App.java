@@ -1,3 +1,4 @@
+// Battleship game
 import java.util.Scanner;
 public class Battleship2App{
 	public static void main(String[] args) {
